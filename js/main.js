@@ -2,19 +2,11 @@ $(document).ready(function(){
 
 	function preloader() {
 	if (document.images) {
-		var img1 = new Image();
-		var img2 = new Image();
-		var img3 = new Image();
-		var img4 = new Image();
-		var img5 = new Image();
-		var img6 = new Image();
-
-		img1.src = "img/licud/1.jpg";
-		img2.src = "img/licud/2.jpg";
-		img3.src = "img/licud/3.jpg";
-		img4.src = "img/licud/4.jpg";
-		img5.src = "img/licud/5.jpg";
-		img6.src = "img/licud/6.jpg";
+		var numArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+		for (var i = 1; i < numArray.length; i++) {
+			numArray[i] = new Image();
+			numArray[i].src = "img/licud/"+numArray[i]+".jpg";
+		}
 	}
 }
 function addLoadEvent(func) {
