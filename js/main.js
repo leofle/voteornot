@@ -5,10 +5,16 @@ $(document).ready(function(){
 		var img1 = new Image();
 		var img2 = new Image();
 		var img3 = new Image();
+		var img4 = new Image();
+		var img5 = new Image();
+		var img6 = new Image();
 
 		img1.src = "img/licud/1.jpg";
 		img2.src = "img/licud/2.jpg";
 		img3.src = "img/licud/3.jpg";
+		img4.src = "img/licud/4.jpg";
+		img5.src = "img/licud/5.jpg";
+		img6.src = "img/licud/6.jpg";
 	}
 }
 function addLoadEvent(func) {
