@@ -42,12 +42,6 @@ $('.show').click(function(e){
 				partie = y;
 			}
 
-
-
-			//if ($('.show').find(this).attr() == ($('.show').not(this).attr())) {
-			//	$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+(1)+'.jpg')
-			//}
-
 			if ($(this).hasClass('licud')) {
 				if (i >= 21) {
 					i = random;
