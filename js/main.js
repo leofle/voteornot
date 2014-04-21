@@ -1,4 +1,31 @@
 $(document).ready(function(){
+
+	function preloader() {
+	if (document.images) {
+		var img1 = new Image();
+		var img2 = new Image();
+		var img3 = new Image();
+
+		img1.src = "img/licud/1.jpg";
+		img2.src = "img/licud/2.jpg";
+		img3.src = "img/licud/3.jpg";
+	}
+}
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		};
+	}
+}
+addLoadEvent(preloader);
+
 	var l = 'licud';
 	var y = 'yeshatid';
 	var m = 'meretz';
