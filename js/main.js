@@ -6,6 +6,7 @@ $(document).ready(function(){
 		for (var i = 1; i < numArray.length; i++) {
 			numArray[i] = new Image();
 			numArray[i].src = "img/licud/"+i+".jpg";
+			numArray[i].src = "img/avoda/"+i+".jpg";
 		}
 	}
 }
