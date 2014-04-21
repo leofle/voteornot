@@ -1,0 +1,276 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h3 {
+	font-size: 55px;
+	text-align:center;
+	font-family: verdana;
+	position: relative;
+	top: 20px;
+}
+
+
+.footer, .header {
+	background-color:#2B65EC;
+	
+}
+
+.header {
+	height:100px;
+	border-bottom:4px solid #ffffff;
+}
+
+
+.footer, .push{
+	border-top:4px solid #ffffff;
+	height: 224px;
+}
+
+
+.container {
+	background-color:grey;
+	/*min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto;*/
+	  
+}
+
+.main {
+	background-color:white;
+	/*border:1px solid black;*/
+}
+
+.select_container {
+	margin:auto;
+	width: 900px;
+	height: 581px;
+}
+
+input {
+	position: relative;
+	top: -505px;
+	left: 435px;
+}
+
+.middle {
+	position: relative;
+	left: 354px;
+	top: -200px;
+}
+
+.right {
+	position: relative;
+	left: 577px;
+	top: -389px;
+}
+
+.left {
+	position: relative;
+	top: 89px;
+	left: 20px;
+}
+
+.results {
+	width:100px;
+	height:120px;
+	position: relative;
+	top: -541px;
+	left: 404px;
+	/*border:2px solid black;*/
+	padding:5px;
+	box-shadow: 0px 5px 5px #888888;
+	background-color:#ffffff;
+	display:none;
+}
+
+.results span {
+	display:block;
+	width:0px;
+	height:30px;
+	background-color:grey;
+	border-radius:4px;
+	font-family: verdana;
+	color: white;
+}
+
+.results span p {
+	padding-top: 5px;
+	padding-left: 10px;
+}
+
+
+#licud {
+	background-color:blue;
+}
+
+#avoda {
+	background-color:red;
+}
+
+#yesh {
+	background-color:cyan;
+}
+
+#meretz {
+	background-color:green;
+}
+
+.show {
+	box-shadow: 0px 5px 5px #888888;
+	padding:10px;
+}
+
+.popup {
+	width:500px;
+	height:300px;
+	background-color:#ffffff;
+	border:1px solid black;
+	display: none;
+	z-index: 5000;
+	position: absolute;
+	top: 245px;
+	left: 433px;
+}
+
+#close {
+	cursor: pointer;
+	position: relative;
+	top: -10px;
+	left: 485px;
+	z-index:300;
+}
+
+.pop_holder {
+	background-color:black;
+	height: 613px;
+	position: relative;
+	top: -862px;
+	opacity: 0.8;
+	z-index: 10;
+	display:none;
+}
+
+.no_show {
+	display:none;
+}
+
+#licud_pop {
+	position: relative;
+	left: 24px;
+}
+
+#meretz_pop {
+	position: relative;
+	top: -33px;
+}
+
+#avoda_pop {
+	position: relative;
+	top: -34px;
+}
+
+#yesh_pop {
+	position: relative;
+	top: -33px;
+}
+
+.ui-progressbar .ui-progressbar-value { background-image: url(img/pbar-ani.gif); }
+
+.likud_progres {
+	position: relative;
+	top: -513px;
+	width: 17%;
+	left: 382px;
+}
+
+.intouch {
+	font-family: verdana;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-left: 21px;
+	color: white;
+	height: 22px;
+	background-color: #98AFC7;
+	border-top: 2px solid white;
+}
+
+#check {
+	position:relative;
+}
+
+
+.fb-like {
+	position: relative;
+	left: 640px;
+	top: -25px;
+}
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;
+	color:#ffffff;}
+a:active {text-decoration:underline;}
+
+#logo {
+	height:100px;
+	position: relative;
+	left: 557px;
+	top:-42px;
+}
+
+#box {
+	height:150px;
+}
+
+.logo_and_title {
+	margin: auto;
+	width: 633px;
+	position: relative;
+	right: 435px;
+}
+
+.cache {
+	display:none;
+}
