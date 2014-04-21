@@ -1,4 +1,32 @@
 $(document).ready(function(){
+
+	function preloader() {
+	if (document.images) {
+		var numArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+		for (var i = 1; i < numArray.length; i++) {
+			numArray[i] = new Image();
+			numArray[i].src = "img/licud/"+i+".jpg";
+			numArray[i].src = "img/avoda/"+i+".jpg";
+			numArray[i].src = "img/meretz/"+i+".jpg";
+			numArray[i].src = "img/yeshatid/"+i+".jpg";
+		}
+	}
+}
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		};
+	}
+}
+addLoadEvent(preloader);
+
 	var l = 'licud';
 	var y = 'yeshatid';
 	var m = 'meretz';
@@ -106,29 +134,25 @@ $('.show').click(function(e){
 
 			if ($('span#licud').width() == 100) {
 				$('.popup').css('display','inline-block');
-				$('.pop_holder').css('display','block');
-				$('span#licud_pop').css('display','block');
+				$('.pop_holder, span#licud_pop').css('display','block');
 				$('#check').css('top','-113px');
 				$('#check').css('left','118px');
 			}
 			if ($('span#meretz').width() == 100) {
 				$('.popup').css('display','inline-block');
-				$('.pop_holder').css('display','block');
-				$('span#meretz_pop').css('display','block');
+				$('.pop_holder, span#meretz_pop').css('display','block');
 				$('#check').css('top','-24px');
 				$('#check').css('left','118px');
 			}
 			if ($('span#yesh').width() == 100) {
 				$('.popup').css('display','inline-block');
-				$('.pop_holder').css('display','block');
-				$('span#yesh_pop').css('display','block');
+				$('.pop_holder, span#yesh_pop').css('display','block');
 				$('#check').css('top','-54px');
 				$('#check').css('left','118px');
 			}
 			if ($('span#avoda').width() == 100) {
 				$('.popup').css('display','inline-block');
-				$('.pop_holder').css('display','block');
-				$('span#avoda_pop').css('display','block');
+				$('.pop_holder, span#avoda_pop').css('display','block');
 				$('#check').css('top','-84px');
 				$('#check').css('left','118px');
 			}
