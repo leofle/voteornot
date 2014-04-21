@@ -7,6 +7,8 @@ $(document).ready(function(){
 			numArray[i] = new Image();
 			numArray[i].src = "img/licud/"+i+".jpg";
 			numArray[i].src = "img/avoda/"+i+".jpg";
+			numArray[i].src = "img/meretz/"+i+".jpg";
+			numArray[i].src = "img/yeshatid/"+i+".jpg";
 		}
 	}
 }
