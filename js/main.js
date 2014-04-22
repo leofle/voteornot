@@ -1,5 +1,31 @@
 $(document).ready(function(){
 
+var l = 'licud';
+var y = 'yeshatid';
+var m = 'meretz';
+var a = 'avoda';
+
+
+var not = $('img').not(this).removeClass;
+
+var num = '95';
+var likudNum = '95';
+var avodaNum = '95';
+var meretzNum = '95';
+var yeshNum = '95';
+var partieActiveNum = '95';
+
+// for (var i = 0; i < partieArray.length; i++) {
+// var partieArray = ['licud','avoda','yeshatid','meretz'];
+// }
+
+function partieChanger(partieActive) {
+	$('#'+partieActive).width(partieActiveNum++);
+	$('.show').not(this).removeClass('avoda, yeshatid, meretz, licud');
+	$('.show').not(this).addClass(partieActive);
+	$('.show').not(this).attr('src', 'img/'+partieActive+'/'+(i++)+'.jpg');
+}
+
 	function preloader() {
 	if (document.images) {
 		var numArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
@@ -27,26 +53,10 @@ function addLoadEvent(func) {
 }
 addLoadEvent(preloader);
 
-	var l = 'licud';
-	var y = 'yeshatid';
-	var m = 'meretz';
-	var a = 'avoda';
-
-
-	var not = $('img').not(this).removeClass;
-
-	var num = '95';
-	var likudNum = '95';
-	var avodaNum = '95';
-	var meretzNum = '95';
-	var yeshNum = '95';
-
-
 	$('#close').click(function(){
 		$('.popup, .pop_holder, span#licud_pop, span#meretz_pop, span#yesh_pop, span#avoda_pop').css('display','none');
 		$('.results').css('display','block');
 		});
-
 
 
 $('.show').click(function(e){
@@ -77,14 +87,14 @@ $('.show').click(function(e){
 				if (partie == l) {
 					partie = y;
 				}
-
-				$('#licud').width(likudNum++);
-				$('.show').not(this).removeClass('avoda');
-				$('.show').not(this).removeClass('yeshatid');
-				$('.show').not(this).removeClass('meretz');
-				$('.show').not(this).removeClass('licud');
-				$('.show').not(this).addClass(partie);
-				$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
+				partieChanger('licud');
+				// $('#licud').width(likudNum++);
+				// $('.show').not(this).removeClass('avoda');
+				// $('.show').not(this).removeClass('yeshatid');
+				// $('.show').not(this).removeClass('meretz');
+				// $('.show').not(this).removeClass('licud');
+				// $('.show').not(this).addClass(partie);
+				// $('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 			if ($(this).hasClass('meretz')) {
 				if (i >= 21) {
