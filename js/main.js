@@ -15,6 +15,9 @@ var meretzNum = '95';
 var yeshNum = '95';
 var partieActiveNum = '95';
 
+random = Math.ceil(Math.random() * 20);
+var i = random;
+
 // for (var i = 0; i < partieArray.length; i++) {
 // var partieArray = ['licud','avoda','yeshatid','meretz'];
 // }
@@ -61,9 +64,6 @@ addLoadEvent(preloader);
 
 $('.show').click(function(e){
 	e.preventDefault();
-
-			random = Math.ceil(Math.random() * 20);
-			var i = random;
 
 			partieNum = Math.ceil(Math.random() * 4);
 			$('#shp').html(partieNum);
