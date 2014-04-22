@@ -24,7 +24,10 @@ var i = random;
 
 function partieChanger(partieActive) {
 	$('#'+partieActive).width(partieActiveNum++);
-	$('.show').not(this).removeClass('avoda, yeshatid, meretz, licud');
+	$('.show').not(this).removeClass('avoda');
+	$('.show').not(this).removeClass('yeshatid');
+	$('.show').not(this).removeClass('meretz');
+	$('.show').not(this).removeClass('licud');
 	$('.show').not(this).addClass(partieActive);
 	$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 }
