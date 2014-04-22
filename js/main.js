@@ -26,7 +26,7 @@ function partieChanger(partieActive) {
 	$('#'+partieActive).width(partieActiveNum++);
 	$('.show').not(this).removeClass('avoda, yeshatid, meretz, licud');
 	$('.show').not(this).addClass(partieActive);
-	$('.show').not(this).attr('src', 'img/'+partieActive+'/'+(i++)+'.jpg');
+	$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 }
 
 	function preloader() {
