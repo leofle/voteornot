@@ -8,12 +8,7 @@ var a = 'avoda';
 
 var not = $('img').not(this).removeClass;
 
-var num = '95';
-var likudNum = '95';
-var avodaNum = '95';
-var meretzNum = '95';
-var yeshNum = '95';
-var partieActiveNum = '95';
+var num, likudNum, avodaNum, meretzNum, yeshNum, partieActiveNum = '95';
 
 random = Math.ceil(Math.random() * 20);
 var i = random;
