@@ -14,7 +14,18 @@ var i = random;
 
 
 function partieChanger() {
-partie = this.partie;
+	if (partieNum == 1) {
+		partie = a;
+	}
+	if (partieNum == 2) {
+		partie = m;
+	}
+	if (partieNum == 3) {
+		partie = l;
+	}
+	if (partieNum == 4) {
+		partie = y;
+	}
 $('.show').not(this)
 .removeClass('avoda yeshatid meretz licud')
 .addClass(partie)
@@ -59,18 +70,6 @@ $('.show').click(function(e){
 
 			partieNum = Math.ceil(Math.random() * 4);
 			$('#shp').html(partieNum);
-			if (partieNum == 1) {
-				partie = a;
-			}
-			if (partieNum == 2) {
-				partie = m;
-			}
-			if (partieNum == 3) {
-				partie = l;
-			}
-			if (partieNum == 4) {
-				partie = y;
-			}
 
 			if ($(this).hasClass('licud')) {
 				if (i >= 21) {
@@ -80,7 +79,7 @@ $('.show').click(function(e){
 					partie = y;
 				}
 				$('#licud').width(likudNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
+				partieChanger();
 			}
 			if ($(this).hasClass('meretz')) {
 				if (i >= 21) {
