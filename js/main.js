@@ -119,7 +119,9 @@ $('.show').click(function(e){
 				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 
-			popChanger('licud');popChanger('meretz');popChanger('avoda');popChanger('yesh');
+			for (var n = 0; n < partieArray.length; n++) {
+				popChanger(partieArray[n]);
+			}
 
 
 			});
