@@ -7,11 +7,18 @@ var a = 'avoda';
 var partie;
 var not = $('img').not(this).removeClass;
 
-num = likudNum = avodaNum = meretzNum = yeshNum = partieActiveNum = '95';
+num = licudNum = avodaNum = meretzNum = yeshNum = partieActiveNum = '95';
 
 random = Math.ceil(Math.random() * 20);
 var i = random;
 
+function popChanger(param1) {
+	if ($('span#'+param1).width() == 100) {
+		$('.popup').css('display','inline-block');
+		$('.pop_holder, span#'+param1+'_pop').css('display','block');
+		$('span#'+param1).append('<img id="check" src="img/v.gif" width="24" height="19" alt="V" style="top: -17px; left: 118px;">');
+	}
+}
 
 function partieChanger() {
 $('.show').not(this)
@@ -25,10 +32,10 @@ $('.show').not(this)
 		var numArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 		for (var i = 1; i < numArray.length; i++) {
 			numArray[i] = new Image();
-			numArray[i].src = "img/licud/"+i+".jpg";
-			numArray[i].src = "img/avoda/"+i+".jpg";
-			numArray[i].src = "img/meretz/"+i+".jpg";
-			numArray[i].src = "img/yeshatid/"+i+".jpg";
+			numArray[i].src = "img/"+l+"/"+i+".jpg";
+			numArray[i].src = "img/"+a+"/"+i+".jpg";
+			numArray[i].src = "img/"+m+"/"+i+".jpg";
+			numArray[i].src = "img/"+y+"/"+i+".jpg";
 		}
 	}
 }
@@ -57,7 +64,7 @@ $('.show').click(function(e){
 	e.preventDefault();
 
 			partieNum = Math.ceil(Math.random() * 4);
-			$('#shp').html(partieNum);
+
 			if (partieNum == 1) {
 				partie = a;
 			}
@@ -77,7 +84,7 @@ $('.show').click(function(e){
 				if (partie == l) {
 					partie = y;
 				}
-				$('#licud').width(likudNum++);
+				$('#licud').width(licudNum++);
 				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 			if ($(this).hasClass('meretz')) {
@@ -111,30 +118,7 @@ $('.show').click(function(e){
 				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 
-			if ($('span#licud').width() == 100) {
-				$('.popup').css('display','inline-block');
-				$('.pop_holder, span#licud_pop').css('display','block');
-				$('#check').css('top','-113px');
-				$('#check').css('left','118px');
-			}
-			if ($('span#meretz').width() == 100) {
-				$('.popup').css('display','inline-block');
-				$('.pop_holder, span#meretz_pop').css('display','block');
-				$('#check').css('top','-24px');
-				$('#check').css('left','118px');
-			}
-			if ($('span#yesh').width() == 100) {
-				$('.popup').css('display','inline-block');
-				$('.pop_holder, span#yesh_pop').css('display','block');
-				$('#check').css('top','-54px');
-				$('#check').css('left','118px');
-			}
-			if ($('span#avoda').width() == 100) {
-				$('.popup').css('display','inline-block');
-				$('.pop_holder, span#avoda_pop').css('display','block');
-				$('#check').css('top','-84px');
-				$('#check').css('left','118px');
-			}
+			popChanger('licud');popChanger('meretz');popChanger('avoda');popChanger('yesh');
 
 
 			});
