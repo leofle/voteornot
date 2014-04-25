@@ -57,7 +57,7 @@ $('.show').click(function(e){
 	e.preventDefault();
 
 			partieNum = Math.ceil(Math.random() * 4);
-			$('#shp').html(partieNum);
+			$('#shp').val(partieNum);
 			if (partieNum == 1) {
 				partie = a;
 			}
