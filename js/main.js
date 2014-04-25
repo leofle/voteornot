@@ -44,10 +44,10 @@ $('.show').not(this)
 		var numArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 		for (var i = 1; i < numArray.length; i++) {
 			numArray[i] = new Image();
-			numArray[i].src = "img/licud/"+i+".jpg";
-			numArray[i].src = "img/avoda/"+i+".jpg";
-			numArray[i].src = "img/meretz/"+i+".jpg";
-			numArray[i].src = "img/yeshatid/"+i+".jpg";
+			numArray[i].src = "img/"+l+"/"+i+".jpg";
+			numArray[i].src = "img/"+a+"/"+i+".jpg";
+			numArray[i].src = "img/"+m+"/"+i+".jpg";
+			numArray[i].src = "img/"+y+"/"+i+".jpg";
 		}
 	}
 }
