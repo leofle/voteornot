@@ -103,10 +103,7 @@ $('.show').click(function(e){
 					partie = l;
 				}
 				$('#avoda').width(avodaNum++);
-				$('.show').not(this).removeClass('avoda');
-				$('.show').not(this).removeClass('yeshatid');
-				$('.show').not(this).removeClass('meretz');
-				$('.show').not(this).removeClass('licud');
+				$('.show').not(this).removeClass('avoda, yeshatid, meretz, licud');
 				$('.show').not(this).addClass(partie);
 				$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
@@ -118,10 +115,7 @@ $('.show').click(function(e){
 					partie = m;
 				}
 				$('#yesh').width(yeshNum++);
-				$('.show').not(this).removeClass('avoda');
-				$('.show').not(this).removeClass('yeshatid');
-				$('.show').not(this).removeClass('meretz');
-				$('.show').not(this).removeClass('licud');
+				$('.show').not(this).removeClass('avoda, yeshatid, meretz, licud');
 				$('.show').not(this).addClass(partie);
 				$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
