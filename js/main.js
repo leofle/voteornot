@@ -7,7 +7,7 @@ var a = 'avoda';
 var partie;
 var not = $('img').not(this).removeClass;
 
-num = likudNum = avodaNum = meretzNum = yeshNum = partieActiveNum = '95';
+num = licudNum = avodaNum = meretzNum = yeshNum = partieActiveNum = '95';
 
 random = Math.ceil(Math.random() * 20);
 var i = random;
@@ -57,7 +57,7 @@ $('.show').click(function(e){
 	e.preventDefault();
 
 			partieNum = Math.ceil(Math.random() * 4);
-			$('input[name=shp]').val(partieNum);
+
 			if (partieNum == 1) {
 				partie = a;
 			}
@@ -77,7 +77,7 @@ $('.show').click(function(e){
 				if (partie == l) {
 					partie = y;
 				}
-				$('#licud').width(likudNum++);
+				$('#licud').width(licudNum++);
 				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 			if ($(this).hasClass('meretz')) {
