@@ -87,9 +87,7 @@ $('.show').click(function(e){
 					partie = a;
 				}
 				$('#meretz').width(meretzNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud');
-				$('.show').not(this).addClass(partie);
-				$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
+				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 		if ($(this).hasClass('avoda')) {
 				if (i >= 21) {
@@ -99,9 +97,7 @@ $('.show').click(function(e){
 					partie = l;
 				}
 				$('#avoda').width(avodaNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud');
-				$('.show').not(this).addClass(partie);
-				$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
+				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 			if ($(this).hasClass('yeshatid')) {
 				if (i >= 21) {
@@ -111,9 +107,7 @@ $('.show').click(function(e){
 					partie = m;
 				}
 				$('#yesh').width(yeshNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud');
-				$('.show').not(this).addClass(partie);
-				$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
+				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 
 			if ($('span#licud').width() == 100) {
