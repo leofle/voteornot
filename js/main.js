@@ -7,7 +7,7 @@ var a = 'avoda';
 
 var not = $('img').not(this).removeClass;
 
-var num, likudNum, avodaNum, meretzNum, yeshNum, partieActiveNum = '95';
+num = likudNum = avodaNum = meretzNum = yeshNum = partieActiveNum = '95';
 
 random = Math.ceil(Math.random() * 20);
 var i = random;
