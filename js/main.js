@@ -81,7 +81,7 @@ $('.show').click(function(e){
 					partie = y;
 				}
 				$('#licud').width(likudNum++);
-				partieChanger();
+				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 			if ($(this).hasClass('meretz')) {
 				if (i >= 21) {
