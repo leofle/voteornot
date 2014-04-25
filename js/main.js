@@ -16,19 +16,7 @@ function popChanger(param1) {
 	if ($('span#'+param1).width() == 100) {
 		$('.popup').css('display','inline-block');
 		$('.pop_holder, span#'+param1+'_pop').css('display','block');
-		if(param1=='licud'){
-			$('#check').css('top','-113px');
-		}
-		if(param1=='meretz'){
-			$('#check').css('top','-24px');
-		}
-		if(param1=='yesh'){
-			$('#check').css('top','-54px');
-		}
-		if(param1=='avoda'){
-			$('#check').css('top','-84px');
-		}
-		$('#check').css('left','118px');
+		$('span#'+param1).append('<img id="check" src="img/v.gif" width="24" height="19" alt="V" style="top: -17px; left: 118px;">');
 	}
 }
 
