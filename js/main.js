@@ -4,6 +4,7 @@ var l = 'licud';
 var y = 'yeshatid';
 var m = 'meretz';
 var a = 'avoda';
+partieArray = [a,m,l,y];
 var partie;
 var not = $('img').not(this).removeClass;
 
@@ -66,16 +67,16 @@ $('.show').click(function(e){
 			partieNum = Math.ceil(Math.random() * 4);
 
 			if (partieNum == 1) {
-				partie = a;
+				partie = partieArray[0];
 			}
 			if (partieNum == 2) {
-				partie = m;
+				partie = partieArray[1];
 			}
 			if (partieNum == 3) {
-				partie = l;
+				partie = partieArray[2];
 			}
 			if (partieNum == 4) {
-				partie = y;
+				partie = partieArray[3];
 			}
 			if ($(this).hasClass('licud')) {
 				if (i >= 21) {
