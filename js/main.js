@@ -4,7 +4,6 @@ var l = 'licud';
 var y = 'yeshatid';
 var m = 'meretz';
 var a = 'avoda';
-var partie;
 
 var not = $('img').not(this).removeClass;
 
