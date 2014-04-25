@@ -78,14 +78,14 @@ $('.show').click(function(e){
 			if (partieNum == 4) {
 				partie = partieArray[3];
 			}
-			if ($(this).hasClass('licud')) {
+			if ($(this).hasClass(partieArray[0])) {
 				if (i >= 21) {
 					i = random;
 				}
 				if (partie == l) {
 					partie = y;
 				}
-				$('#licud').width(licudNum++);
+				$('#'+partieArray[0]).width(licudNum++);
 				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 			}
 			if ($(this).hasClass('meretz')) {
