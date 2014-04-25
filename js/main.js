@@ -15,9 +15,7 @@ var i = random;
 
 
 function partieChanger() {
-$('.show').not(this).removeClass('avoda yeshatid meretz licud');
-$('.show').not(this).addClass(partie);
-$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
+$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 }
 
 	function preloader() {
@@ -79,9 +77,7 @@ $('.show').click(function(e){
 					partie = y;
 				}
 				$('#licud').width(likudNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud');
-				$('.show').not(this).addClass(partie);
-				$('.show').not(this).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
+				partieChanger();
 			}
 			if ($(this).hasClass('meretz')) {
 				if (i >= 21) {
