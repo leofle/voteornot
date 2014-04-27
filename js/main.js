@@ -85,7 +85,7 @@ $('.show').click(function(e){
 						partie = partieArray[i-1];
 					}
 				}
-
+			}
 			pnumcalc();
 
 			if ($(this).hasClass('licud')) {
