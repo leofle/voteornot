@@ -83,7 +83,7 @@ $('.show').click(function(e){
 				for (var i = 1; i < vara.length; i++) {
 					if (partieNum == vara[i]) {
 						partie = partieArray[i-1];
-						alert(partieNum+partieArray);
+						alert(partieNum+partie);
 					}
 				}
 			}
