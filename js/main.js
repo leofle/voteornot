@@ -64,18 +64,30 @@ $('.show').click(function(e){
 
 			partieNum = Math.ceil(Math.random() * 4);
 
-			if (partieNum == 1) {
-				partie = partieArray[0];
-			}
-			if (partieNum == 2) {
-				partie = partieArray[1];
-			}
-			if (partieNum == 3) {
-				partie = partieArray[2];
-			}
-			if (partieNum == 4) {
-				partie = partieArray[3];
-			}
+			// if (partieNum == 1) {
+			// 	partie = partieArray[0];
+			// }
+			// if (partieNum == 2) {
+			// 	partie = partieArray[1];
+			// }
+			// if (partieNum == 3) {
+			// 	partie = partieArray[2];
+			// }
+			// if (partieNum == 4) {
+			// 	partie = partieArray[3];
+			// }
+
+			function pnumcalc(){
+				vara = [1,2,3,4];
+				varaarr = [0,1,2,3];
+				for (var i = 1; i < vara.length; i++) {
+					if (partieNum == vara[i]) {
+						partie = partieArray[i-1];
+					}
+				}
+
+			pnumcalc();
+
 			if ($(this).hasClass('licud')) {
 				if (i >= 21) {
 					i = random;
