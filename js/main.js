@@ -76,6 +76,8 @@ $('.show').click(function(e){
 			if (partieNum == 4) {
 				partie = partieArray[3];
 			}
+
+
 			if ($(this).hasClass('licud')) {
 				if (i >= 21) {
 					i = random;
