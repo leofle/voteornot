@@ -62,18 +62,18 @@ addLoadEvent(preloader);
 $('.show').click(function(e){
 	e.preventDefault();
 
-			partieNum = Math.ceil(Math.random() * 4);
+			var partieNum = Math.ceil(Math.random() * 4);
 
 			if (partieNum == 1) {
 				partie = partieArray[0];
 			}
-			if (partieNum == 2) {
+			else if (partieNum == 2) {
 				partie = partieArray[1];
 			}
-			if (partieNum == 3) {
+			else if (partieNum == 3) {
 				partie = partieArray[2];
 			}
-			if (partieNum == 4) {
+			else {
 				partie = partieArray[3];
 			}
 
