@@ -26,18 +26,19 @@ $('.show').not(this)
 .attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 }
 
-	function preloader() {
-	if (document.images) {
-		var numArray = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-		for (var i = 1; i < numArray.length; i++) {
-			numArray[i] = new Image();
-			numArray[i].src = "img/"+l+"/"+i+".jpg";
-			numArray[i].src = "img/"+a+"/"+i+".jpg";
-			numArray[i].src = "img/"+m+"/"+i+".jpg";
-			numArray[i].src = "img/"+y+"/"+i+".jpg";
-		}
-	}
+function preloader() {
+    if (document.images) {
+        var numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        for (var i = 1; i < numArray.length; i++) {
+            numArray[i] = new Image();
+            numArray[i].src = "img/" + l + "/" + i + ".jpg";
+            numArray[i].src = "img/" + a + "/" + i + ".jpg";
+            numArray[i].src = "img/" + m + "/" + i + ".jpg";
+            numArray[i].src = "img/" + y + "/" + i + ".jpg";
+        }
+    }
 }
+
 function addLoadEvent(func) {
 	var oldonload = window.onload;
 	if (typeof window.onload != 'function') {
@@ -53,78 +54,75 @@ function addLoadEvent(func) {
 }
 addLoadEvent(preloader);
 
-	$('#close').click(function(){
-		$('.popup, .pop_holder, span#licud_pop, span#meretz_pop, span#yesh_pop, span#avoda_pop').css('display','none');
-		$('.results').css('display','block');
-		});
+$('#close').click(function() {
+    $('.popup, .pop_holder, span#licud_pop, span#meretz_pop, span#yesh_pop, span#avoda_pop').css('display', 'none');
+    $('.results').css('display', 'block');
+});
 
 
-$('.show').click(function(e){
-	e.preventDefault();
+$('.show').click(function(e) {
+    e.preventDefault();
 
-			var partieNum = Math.ceil(Math.random() * 4);
+    var partieNum = Math.ceil(Math.random() * 4);
 
-			if (partieNum == 1) {
-				partie = partieArray[0];
-			}
-			else if (partieNum == 2) {
-				partie = partieArray[1];
-			}
-			else if (partieNum == 3) {
-				partie = partieArray[2];
-			}
-			else {
-				partie = partieArray[3];
-			}
+    if (partieNum == 1) {
+        partie = partieArray[0];
+    } else if (partieNum == 2) {
+        partie = partieArray[1];
+    } else if (partieNum == 3) {
+        partie = partieArray[2];
+    } else {
+        partie = partieArray[3];
+    }
 
 
-			if ($(this).hasClass('licud')) {
-				if (i >= 21) {
-					i = random;
-				}
-				if (partie == l) {
-					partie = y;
-				}
-				$('#licud').width(licudNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
-			}
-			if ($(this).hasClass('meretz')) {
-				if (i >= 21) {
-					i = random;
-				}
-				if (partie == m) {
-					partie = a;
-				}
-				$('#meretz').width(meretzNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
-			}
-		if ($(this).hasClass('avoda')) {
-				if (i >= 21) {
-					i = random;
-				}
-				if (partie == a) {
-					partie = l;
-				}
-				$('#avoda').width(avodaNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
-			}
-			if ($(this).hasClass('yeshatid')) {
-				if (i >= 21) {
-					i = random;
-				}
-				if (partie == y) {
-					partie = m;
-				}
-				$('#yesh').width(yeshNum++);
-				$('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
-			}
+    if ($(this).hasClass('licud')) {
+        if (i >= 21) {
+            i = random;
+        }
+        if (partie == l) {
+            partie = y;
+        }
+        $('#licud').width(licudNum++);
+        $('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/' + partie + '/' + (i++) + '.jpg');
+    }
+    if ($(this).hasClass('meretz')) {
+        if (i >= 21) {
+            i = random;
+        }
+        if (partie == m) {
+            partie = a;
+        }
+        $('#meretz').width(meretzNum++);
+        $('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/' + partie + '/' + (i++) + '.jpg');
+    }
+    if ($(this).hasClass('avoda')) {
+        if (i >= 21) {
+            i = random;
+        }
+        if (partie == a) {
+            partie = l;
+        }
+        $('#avoda').width(avodaNum++);
+        $('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/' + partie + '/' + (i++) + '.jpg');
+    }
+    if ($(this).hasClass('yeshatid')) {
+        if (i >= 21) {
+            i = random;
+        }
+        if (partie == y) {
+            partie = m;
+        }
+        $('#yesh').width(yeshNum++);
+        $('.show').not(this).removeClass('avoda yeshatid meretz licud').addClass(partie).attr('src', 'img/' + partie + '/' + (i++) + '.jpg');
+    }
 
-			for (var n = 0; n < partieArray.length; n++) {
-				popChanger(partieArray[n]);
-			}
+    for (var n = 0; n < partieArray.length; n++) {
+        popChanger(partieArray[n]);
+    }
 
 
-			});
+});
 
 
 
