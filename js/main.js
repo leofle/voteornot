@@ -65,10 +65,8 @@ $('#close').click(function() {
 });
 
 
-$('.show').click(function(e) {
-    e.preventDefault();
-    console.log('show clicked');
-
+$('.show').click(function(event) {
+    event.preventDefault();
     var partieNum = Math.ceil(Math.random() * 4);
 
     if (partieNum == 1) {
