@@ -67,6 +67,7 @@ $('#close').click(function() {
 
 $('.show').click(function(event) {
     event.preventDefault();
+    console.log('show clicked');
     var partieNum = Math.ceil(Math.random() * 4);
 
     if (partieNum == 1) {
