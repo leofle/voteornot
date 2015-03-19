@@ -4,7 +4,7 @@ var l = 'licud';
 var y = 'yeshatid';
 var m = 'meretz';
 var a = 'avoda';
-partieArray = [a,m,l,y];
+var partieArray = [a,m,l,y];
 var partie;
 var not = $('img').not(this).removeClass;
 num = licudNum = avodaNum = meretzNum = yeshNum = partieActiveNum = '95';
