@@ -20,6 +20,7 @@ function popChanger(param1) {
 }
 
 function partieChanger() {
+/*jshint validthis:true */
 $('.show').not(this).removeClass('avoda yeshatid meretz licud')
 .addClass(partie)
 .attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
