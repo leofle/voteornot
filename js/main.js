@@ -1,5 +1,5 @@
-$(document).ready(function(){
-
+(function($,window,document,undefined){
+    'use strict';
 var l = 'licud';
 var y = 'yeshatid';
 var m = 'meretz';
@@ -20,8 +20,7 @@ function popChanger(param1) {
 }
 
 function partieChanger() {
-$('.show').not(this)
-.removeClass('avoda yeshatid meretz licud')
+$('.show').not(this).removeClass('avoda yeshatid meretz licud')
 .addClass(partie)
 .attr('src', 'img/'+partie+'/'+(i++)+'.jpg');
 }
@@ -128,4 +127,4 @@ $('.show').click(function(e) {
 
 
 
-});
+})(jQuery, this, this.document);
