@@ -51,8 +51,9 @@ function addLoadEvent(func) {
 	} else {
 		window.onload = function() {
 			if (oldonload) {
-				oldonload();
+				return oldonload();
 			}
+      
 			func();
 		};
 	}
