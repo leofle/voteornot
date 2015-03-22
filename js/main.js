@@ -53,7 +53,6 @@ function addLoadEvent(func) {
 			if (oldonload) {
 				return oldonload();
 			}
-      
 			func();
 		};
 	}
